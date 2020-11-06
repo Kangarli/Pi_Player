@@ -1,0 +1,135 @@
+html, body {
+    overflow: hidden;
+}
+
+.musics {
+    display: flex;
+    justify-content: center;
+    height: 496px;
+    overflow: scroll;
+}
+
+#blur {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+}
+
+#musicList {
+    mix-blend-mode: difference;
+}
+
+.musics::-webkit-scrollbar {
+    display: none;
+}
+
+.musics ul {
+    z-index: 2;
+}
+
+.musics ul li {
+    margin: 30px 0;
+    text-align: center;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all ease .3s;
+    border-radius: 4px;
+    color: #ffffff;
+}
+
+.musics ul li:hover {
+    background-color: rgb(94, 94, 94);
+}
+
+.player {
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    box-shadow: #000000 -4px 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 21;
+    color: #000000;
+}
+
+.player h1 {
+    font-weight: bolder;
+}
+
+.player ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.player ul li {
+    margin: 0 20px;
+}
+
+.player__bar {
+    width: 80%;
+    height: 4px;
+    background-color: #000000;
+    margin: 10px 4px 5px 4px;
+    display: flex;
+    align-items: center;
+}
+
+#timeBar {
+    width: 14px;
+    height: 14px;
+    background-color: #000000;
+    border-radius: 50%;
+    transition: all ease .3s;
+}
+
+#playIcon {
+    display: block;
+}
+
+#pauseIcon {
+    display: none;
+}
+
+.volume {
+    display: flex;
+    align-items: center;
+}
+
+.volume:hover .volume__controller {
+    width: 100px;
+}
+
+.volume__controller {
+    transition: all ease .3s;
+    margin: 0 10px;
+    width: 0;
+    height: 6px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+}
+
+.volume__dot {
+    height: 14px;
+    width: 14px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+}
+
+#muteIcon {
+    display: none;
+}
+
+canvas {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}

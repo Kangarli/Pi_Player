@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pi player</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="musics">
+        <div id="blur"></div>
+        <ul id="musicList"></ul>
+    </div>
+
+    <div class="player">
+        <h1 id="currentMusicName">...</h1>
+        <div style="width: 100%; display: flex; align-items: center; justify-content: space-around;">
+            <div style="mix-blend-mode: difference;">
+                <h1 id="currentDuration">..</h1>
+            </div>
+            <div id="player__bar" class="player__bar">
+                <div id="timeBar" class="played__dot"></div>
+            </div>
+            <div>
+                <h1 id="musicDuration">..</h1>
+            </div>
+        </div>
+        <ul>
+            <li id="randomIcon"><i onclick="playRandom()" class="fa fa-random"></i></li>
+            <li><i onclick="playPrev()" class="fa fa-step-backward"></i></li>
+            <li id="playIcon"><i onclick="playCurrent()" class="fa fa-play"></i></li>
+            <li id="pauseIcon"><i onclick="pauseCurrent()" class="fa fa-pause"></i></li>
+            <li><i onclick="playNext()" class="fa fa-step-forward"></i></li>
+            <li id="repeatIcon"><i onclick="playRepeat()" class="fa fa-repeat"></i></li>
+            <li class="volume"><i onclick="mute()" id="unmuteIcon" class="fa fa-volume-up"></i>
+                <i id="muteIcon" onclick="mute()" class="fa fa-volume-off"></i>
+                <div id="volume__controller" class="volume__controller">
+                    <div id="volume__dot" class="volume__dot"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script src="./scripts/fetching.js"></script>
+</body>
+
+</html>

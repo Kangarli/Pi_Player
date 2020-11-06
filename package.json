@@ -1,0 +1,19 @@
+{
+  "name": "player",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "client": "electron .",
+    "server": "cd server && nodemon",
+    "start": "concurrently \"cd server && nodemon\" \"electron .\" "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "concurrently": "^5.3.0",
+    "electron": "^10.1.2"
+  }
+}
