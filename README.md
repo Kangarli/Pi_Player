@@ -1,1 +1,2 @@
-"# pi_Player" 
+"# Pi_Player" 
+"Music Player App"
